@@ -1,22 +1,24 @@
 package main
 
+// rumus luas lingkaran
+// L = phi * r * r
+// rumus k
+// K = 2 * phi * r
+
 import "fmt"
 
-func keliling(r int, phi int) int {
-	// Menggunakan Diameter (\(d\)): \(K=\pi \times d\)
-	// Menggunakan Jari-jari (\(r\)): \(K=2\times \pi \times r\)(Catatan: \(d=2\times r\))
-	// d = 2 * r
-	// phi := 3
-	diameter := 2 * phi * r
-	// jarijari := 2 * phi * r
-	return diameter
+func keliling(phi int, r int) int {
+	result := 2 * phi * r
+	return result
 }
 
-func luas(r int, phi int) int {
-	result := phi * (r * r)
+func luas(phi int, r int) int {
+	result := phi * r * r
 	return result
 }
 func main() {
-	fmt.Println(keliling(14, 3))
-	fmt.Println(luas(14, 3))
+	fmt.Println(keliling(3, 3))
+	fmt.Println(luas(3, 3))
+
+	fmt.Println(3.14 * 3)
 }
