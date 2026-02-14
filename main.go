@@ -7,19 +7,22 @@ package main
 
 import "fmt"
 
-func keliling(phi float32, r int) int {
+func keliling(r int) int {
 	// result float32 := 2 * phi * r
-	return int(2 * phi * float32(r))
+	return int(2 * 3.14 * float32(r))
 }
 
-func luas(phi int, r int) int {
+func luas(r int) int {
 	// result := phi * r * r
-	return int(phi * r * r)
+	return int(3.14 * float32(r) * float32(r))
 }
 func main() {
-	fmt.Println(keliling(3.14, 3))
-	fmt.Println(luas(3, 3))
+	// fmt.Println(keliling(3.14, 3))
+	// fmt.Println(luas(3.14, 3))
 
-	fmt.Println(3.14 * 3)
-
+	var input int
+	fmt.Println("Masukan Jari-Jari Untuk Mengetahui Luas dan Keliling Lingkaran")
+	fmt.Scanln(&input)
+	fmt.Print("Hasil dari keliling ", input, " adalah ", keliling(3), "\n")
+	fmt.Print("Hasil dari Luas ", input, " adalah ", luas(3), "\n")
 }
